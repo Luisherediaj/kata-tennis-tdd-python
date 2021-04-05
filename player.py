@@ -1,3 +1,7 @@
 class Player:
+    def __init__(self):
+        self.score = "0"
     def getScore(self):
-        return "0"
+        return self.score
+    def winPoint(self):
+        self.score= "15"
