@@ -13,3 +13,12 @@ class TestPlayer (unittest.TestCase):
         player = Player()
         player.winPoint()
         self.assertEqual("15", player.getScore())
+
+    def test_secondPoint(self):
+        player = Player(1)
+        player.winPoint()
+        self.assertEqual("30", player.getScore())
+    def test_thirdPoint(self):
+        player = Player(2)
+        player.winPoint()
+        self.assertEqual("40", player.getScore())
