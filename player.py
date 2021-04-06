@@ -9,7 +9,10 @@ class Player:
     def winPoint(self, other = None):
         if other == None:
             self.score+=1
-            return    
+            return
+
+        if other.getScore() == "Advantage":
+            other.score -= 1    
 
         if self.getScore() == "40" and other.getScore() != "40":
             self.score += 2

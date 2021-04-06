@@ -35,3 +35,10 @@ class TestPlayer (unittest.TestCase):
         player2 = Player(3)
         player1.winPoint(player2)
         self.assertEquals("Advantage", player1.getScore())
+    
+    def test_playerScoresAndOtherPlayerLosesAdvantage(self):
+        player1 = Player(4)
+        player2 = Player(3)
+        player2.winPoint(player1)
+        self.assertEqual("40", player1.getScore())
+        self.assertEqual("40", player1.getScore())
